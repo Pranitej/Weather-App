@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import "./App.css";
 
-const API_KEY = "7fa6e087d9295159441f2757dea937ef";
+const API_KEY = "YOUR_WEATHER_API_KEY";
 
 function App() {
   const [city, setCity] = useState("");
@@ -32,8 +32,7 @@ function App() {
           item.dt_txt.includes("12:00:00")
         );
         setForecast(dailyForecast);
-
-        // Set background based on condition
+        
         const main = weatherData.weather[0].main.toLowerCase();
         const description = weatherData.weather[0].description.toLowerCase();
 
